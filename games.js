@@ -274,8 +274,8 @@ function renderDedeGacorPrincess(container) {
                 <!-- Mascot & Wand Container -->
                 <div class="relative w-full bg-gradient-to-b from-purple-900/60 via-pink-900/40 to-surface-container p-sm rounded-3xl border border-pink-500/40 shadow-[0_0_25px_rgba(236,72,153,0.3)] flex flex-col items-center text-center overflow-hidden">
                     <div class="absolute -top-6 -right-6 w-20 h-20 bg-pink-500/20 rounded-full blur-xl animate-pulse"></div>
-                    <div id="princess-wand-fx" class="text-5xl sm:text-6xl my-xs transition-transform duration-300 transform hover:scale-110 drop-shadow-[0_0_15px_rgba(255,105,180,0.8)]">
-                        👸✨
+                    <div id="princess-wand-fx" class="my-xs transition-transform duration-300 transform hover:scale-110 drop-shadow-[0_0_15px_rgba(255,105,180,0.8)] flex items-center justify-center">
+                        <img src="assets/dede-mascot.png" alt="Putri Dede Mascot" class="w-20 h-20 sm:w-24 sm:h-24 object-contain rounded-2xl border-2 border-pink-400/50 shadow-[0_0_20px_rgba(236,72,153,0.6)]">
                     </div>
                     <h3 class="font-headline-md text-pink-300 text-base sm:text-lg glow-text uppercase tracking-wider">PUTRI DEDE GACOR</h3>
                     <p class="font-label-bold text-[11px] text-yellow-300 tracking-widest">STARLIGHT PRINCESS SLOT</p>
@@ -376,7 +376,7 @@ function renderGridToDOM(grid, winningLocations = []) {
 
             if (item.type === 'scatter') {
                 cellBg = "bg-gradient-to-b from-pink-900/90 to-purple-950/90 border-pink-400 shadow-[0_0_10px_rgba(236,72,153,0.5)]";
-                contentHtml = `<div class="text-2xl sm:text-3xl animate-bounce">👸</div><span class="text-[9px] font-label-bold text-pink-300 uppercase">SCATTER</span>`;
+                contentHtml = `<img src="assets/dede-mascot.png" alt="Scatter" class="w-8 h-8 sm:w-10 sm:h-10 object-contain animate-bounce drop-shadow-[0_0_8px_rgba(236,72,153,0.8)]"><span class="text-[9px] font-label-bold text-pink-300 uppercase">SCATTER</span>`;
             } else if (item.type === 'orb') {
                 cellBg = `bg-gradient-to-tr ${item.color} border-yellow-300 shadow-[0_0_15px_rgba(255,215,0,0.8)] animate-pulse`;
                 contentHtml = `<div class="text-xl sm:text-2xl">${item.icon}</div><span class="text-xs font-headline-md text-white drop-shadow-[0_0_8px_black]">${item.label}</span>`;
@@ -627,7 +627,7 @@ function openCaraMainModal() {
                             <div class="p-2 bg-black/40 rounded-xl border border-amber-400/30">⭐ Bintang: 8x (2x), 12+ (15x)</div>
                             <div class="p-2 bg-black/40 rounded-xl border border-cyan-400/30">🌙 Bulan: 8x (1.5x), 12+ (12x)</div>
                             <div class="p-2 bg-black/40 rounded-xl border border-emerald-400/30">💎 Berlian: 8x (1x), 12+ (10x)</div>
-                            <div class="p-2 bg-black/40 rounded-xl border border-pink-400/30">👸 Scatter: 4+ Trigger 15 FS</div>
+                            <div class="p-2 bg-black/40 rounded-xl border border-pink-400/30 flex items-center gap-1"><img src="assets/dede-mascot.png" class="w-5 h-5 object-contain inline"> Scatter: 4+ Trigger 15 FS</div>
                         </div>
                     </div>
                 </div>
