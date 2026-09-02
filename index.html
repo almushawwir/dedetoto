@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>DEDETOTO - Luxury Entertainment</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&amp;family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#4d4732",
+                        "primary-fixed-dim": "#e9c400",
+                        "error": "#ffb4ab",
+                        "surface-container-highest": "#393528",
+                        "primary-fixed": "#ffe16d",
+                        "on-primary-fixed-variant": "#544600",
+                        "tertiary-fixed-dim": "#00dbe8",
+                        "secondary-fixed": "#ffddaf",
+                        "surface-bright": "#3d392c",
+                        "secondary-fixed-dim": "#ffba44",
+                        "on-primary-fixed": "#221b00",
+                        "tertiary-fixed": "#79f5ff",
+                        "on-tertiary-fixed": "#002022",
+                        "surface-variant": "#393528",
+                        "on-surface-variant": "#d0c6ab",
+                        "on-error": "#690005",
+                        "inverse-on-surface": "#343024",
+                        "primary": "#fff6df",
+                        "on-primary-container": "#705e00",
+                        "outline": "#999077",
+                        "on-tertiary-fixed-variant": "#004f54",
+                        "secondary-container": "#efa500",
+                        "on-secondary-container": "#5f3f00",
+                        "surface-dim": "#161308",
+                        "surface": "#161308",
+                        "on-tertiary-container": "#006a70",
+                        "on-tertiary": "#00363a",
+                        "on-background": "#eae2cf",
+                        "inverse-surface": "#eae2cf",
+                        "background": "#161308",
+                        "surface-container-lowest": "#110e05",
+                        "secondary": "#ffc56a",
+                        "tertiary-container": "#00f1ff",
+                        "on-surface": "#eae2cf",
+                        "on-secondary": "#442c00",
+                        "on-primary": "#3a3000",
+                        "on-secondary-fixed-variant": "#614000",
+                        "surface-tint": "#e9c400",
+                        "error-container": "#93000a",
+                        "surface-container": "#231f14",
+                        "inverse-primary": "#705d00",
+                        "on-secondary-fixed": "#281800",
+                        "primary-container": "#ffd700",
+                        "tertiary": "#defcff",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-low": "#1f1b10",
+                        "surface-container-high": "#2e2a1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.25rem",
+                        "4xl": "2.5rem",
+                        "full": "9999px",
+                        "card": "40px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "xl": "80px",
+                        "lg": "48px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-bold": ["Orbitron"],
+                        "headline-md": ["Orbitron"],
+                        "display-lg": ["Orbitron"],
+                        "display-lg-mobile": ["Orbitron"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "button-text": ["Orbitron"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-bold": ["14px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "button-text": ["16px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #161308;
+            color: #eae2cf;
+            min-height: 100vh;
+        }
+        .glow-text, .text-glow-gold, .gold-glow {
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        }
+        .btn-primary, .btn-gold, .luxe-button, .gold-btn {
+            background: linear-gradient(180deg, #FFD700 0%, #F0A500 100%);
+            border-radius: 40px;
+            color: #221b00;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+        .btn-primary:hover, .btn-gold:hover, .luxe-button:hover, .gold-btn:hover {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+            transform: scale(1.02);
+            filter: brightness(1.1);
+        }
+        .btn-primary:active, .btn-gold:active, .luxe-button:active, .gold-btn:active {
+            transform: scale(0.97);
+            box-shadow: inset 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .glass-card, .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover, .glass-panel-interactive:hover {
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.2);
+            border-color: rgba(255, 215, 0, 0.4);
+        }
+        .glass-panel-interactive {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .input-glass, .luminous-input {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #eae2cf;
+            transition: all 0.3s ease;
+        }
+        .input-glass:focus, .luminous-input:focus {
+            border-color: #ffd700;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+            outline: none;
+        }
+        .avatar-glow {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+            border: 2px solid #ffe16d;
+        }
+        ::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #110e05; }
+        ::-webkit-scrollbar-thumb { background: #393528; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #4d4732; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col relative overflow-x-hidden bg-background text-on-background selection:bg-primary-container selection:text-on-primary-fixed">
+
+    <!-- Global Top Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+        <div class="flex justify-between items-center w-full px-4 md:px-xl max-w-container-max mx-auto h-20">
+            <!-- Brand -->
+            <a href="#" onclick="navigateTo('lounge'); return false;" class="font-display-lg text-display-lg text-primary-fixed drop-shadow-[0_0_15px_rgba(255,215,0,0.4)] md:text-[32px] text-[20px] cursor-pointer">
+                ✦ DEDETOTO ✦
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="hidden md:flex gap-lg items-center">
+                <a id="nav-lounge" class="nav-link font-button-text text-button-text uppercase tracking-widest text-primary-fixed border-b-2 border-primary-fixed pb-1 cursor-pointer" onclick="navigateTo('lounge')">Lounge</a>
+                <a id="nav-lobby" class="nav-link font-button-text text-button-text uppercase tracking-widest text-on-surface-variant/70 hover:text-primary-fixed hover:drop-shadow-[0_0_8px_rgba(255,215,0,0.6)] transition-all duration-300 cursor-pointer" onclick="navigateTo('lobby')">Games Lobby</a>
+                <a id="nav-vault" class="nav-link font-button-text text-button-text uppercase tracking-widest text-on-surface-variant/70 hover:text-primary-fixed hover:drop-shadow-[0_0_8px_rgba(255,215,0,0.6)] transition-all duration-300 cursor-pointer" onclick="navigateTo('vault')">Vault</a>
+                <a id="nav-vip" class="nav-link font-button-text text-button-text uppercase tracking-widest text-on-surface-variant/70 hover:text-primary-fixed hover:drop-shadow-[0_0_8px_rgba(255,215,0,0.6)] transition-all duration-300 cursor-pointer" onclick="navigateTo('vip')">VIP</a>
+            </div>
+
+            <!-- Header Balance & Profile -->
+            <div class="flex items-center gap-md">
+                <div class="hidden sm:flex items-center gap-xs px-sm py-xs bg-surface-container border border-primary-fixed/30 rounded-full cursor-pointer" onclick="navigateTo('vault')">
+                    <span class="material-symbols-outlined text-primary-fixed text-[18px]">stars</span>
+                    <span id="header-balance" class="font-label-bold text-primary-fixed text-sm">4,285,900 EP</span>
+                </div>
+                <button class="btn-primary font-button-text text-button-text uppercase tracking-widest px-md py-sm hidden md:block text-xs md:text-sm" onclick="openSpinModal()">
+                    Spin &amp; Win
+                </button>
+                <div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden border-2 border-primary-fixed shadow-[0_0_10px_rgba(255,215,0,0.5)] cursor-pointer" onclick="navigateTo('profile')">
+                    <img id="header-avatar" alt="VIP Profile Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9sHurylC5wgeolSJQKDm5BKDT2LzF0YIZTUibDxPwa0jyvzWnPbD7U-jsFFhDKUtoKjDtUcPGwRexovrF0O7U2sj3tMDUjlZDUW8aL-PHrzq0eYvgn1UXPFSj4mbwxP29rDzuEgPrEetVY0kg0QF2ZmkLCWMmYNirpOUNNIqNc4NHpml_fCqFpPVbf13rVMAMvR64n40iSsr8TQa6e5SxAfiwQinEQeTdk6gyNFYSF3Yiropsz6_edQ"/>
+                </div>
+                <button class="md:hidden text-primary-fixed" onclick="toggleMobileMenu()">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-surface-container/95 border-b border-white/10 p-md flex flex-col gap-md">
+            <a class="font-button-text text-button-text uppercase tracking-widest text-primary-fixed" onclick="navigateTo('lounge'); toggleMobileMenu();">Lounge</a>
+            <a class="font-button-text text-button-text uppercase tracking-widest text-on-surface-variant" onclick="navigateTo('lobby'); toggleMobileMenu();">Games Lobby</a>
+            <a class="font-button-text text-button-text uppercase tracking-widest text-on-surface-variant" onclick="navigateTo('vault'); toggleMobileMenu();">Vault</a>
+            <a class="font-button-text text-button-text uppercase tracking-widest text-on-surface-variant" onclick="navigateTo('vip'); toggleMobileMenu();">VIP Dashboard</a>
+            <a class="font-button-text text-button-text uppercase tracking-widest text-on-surface-variant" onclick="navigateTo('profile'); toggleMobileMenu();">Account Dossier</a>
+            <button class="btn-primary font-button-text text-button-text uppercase tracking-widest px-md py-sm w-full" onclick="openSpinModal(); toggleMobileMenu();">
+                Spin &amp; Win
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Container Switching Content Sections -->
+    <main class="flex-grow pt-20">
+
+        <!-- SECTION 1: HERO / LOUNGE VIEW -->
+        <section id="view-lounge" class="view-section">
+            <div class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-xl px-md">
+                <!-- Background Elements -->
+                <div class="absolute inset-0 z-0">
+                    <div class="absolute inset-0 bg-gradient-to-b from-surface/80 via-surface to-surface-container z-10"></div>
+                    <div class="w-full h-full bg-cover bg-center opacity-30 object-cover absolute inset-0" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1zfLb0iccGtq5G0Qpm6jJ6hmbxWoIISV6htrOF60ZyTSCD5q_LTEuCkKncwsikp78Rw8FNrCpL4FAFNlAb4XyPdI-qaOSLW-hIP8jg5RTqmN2-H-27AReNtI8oSKFeHKoW160Jb7XscLLGyiO-3KTx0TM9pf36OtZPmdinmW8qMrls_F5Zxb6GuYBfb0gQCUpPlhogpzzjCyyKLS7c8RIYawVTp6zeJHDlsay9IzLzU1_54NyDFWkPA')"></div>
+                </div>
+                <div class="relative z-10 max-w-container-max mx-auto text-center flex flex-col items-center">
+                    <h1 class="font-display-lg text-display-lg md:text-[72px] text-primary-fixed glow-text mb-md leading-tight">
+                        ENTER THE <br/> EXCLUSIVE ARENA
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-lg text-xl">
+                        Experience simulated luxury entertainment. Spin the golden reels, join high-stakes events, and elevate your digital status in the world's most private virtual lounge.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-md items-center justify-center w-full sm:w-auto">
+                        <button class="btn-primary font-button-text text-button-text uppercase tracking-widest px-xl py-md text-lg w-full sm:w-auto flex items-center justify-center gap-sm" onclick="navigateTo('lobby')">
+                            <span class="material-symbols-outlined">casino</span>
+                            SPIN &amp; WIN
+                        </button>
+                        <button class="glass-card font-button-text text-button-text uppercase tracking-widest px-xl py-md text-primary-fixed hover:bg-white/5 w-full sm:w-auto" onclick="navigateTo('vault')">
+                            VIEW VAULT
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bento Grid Section -->
+            <div class="py-xl px-md bg-surface-container-lowest">
+                <div class="max-w-container-max mx-auto">
+                    <div class="text-center mb-xl">
+                        <h2 class="font-headline-md text-headline-md text-primary-fixed mb-sm uppercase tracking-widest glow-text">The Experience</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Where high-stakes tension meets unparalleled design.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-lg auto-rows-[300px]">
+                        <!-- Large Feature -->
+                        <div class="glass-card md:col-span-2 md:row-span-2 relative overflow-hidden group p-lg flex flex-col justify-end">
+                            <div class="absolute inset-0 bg-cover bg-center opacity-40 transition-transform duration-700 group-hover:scale-105 z-0" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZehPZ-bBJbrR4dkriVuZh8kAMRr3Svpdj8eYPbPbklYSmOeMZJxJGwE3IXLj27WJcHwAcJI30QH7Xu4sZH0hfxTH8zHu8wKnqdUXwZqty9WCdYWvjR74BB6cuPa3P9lx3JLML6K1XFZ_XAM8nxwsgvDGWi-bmMuGbZ-Nwnftw2GGjQ-LbZcKUgmSKTcuOvhlNWla_3WpFsEowQXJ9a25zfCMpf7WwZELmKyQ77rLfe24TU_mKrm0pMQ')"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/50 to-transparent z-10"></div>
+                            <div class="relative z-20">
+                                <span class="inline-block px-sm py-xs bg-error/20 border border-error text-error font-label-bold text-label-bold rounded-full mb-sm">LIVE NOW</span>
+                                <h3 class="font-headline-md text-headline-md text-primary-fixed mb-sm">Grand Royale Tournament</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-md max-w-md">Join the elite for a weekend of simulated high-stakes action. Massive prize pools await the bold.</p>
+                                <button class="font-button-text text-button-text text-secondary-fixed hover:text-primary-fixed flex items-center gap-xs uppercase tracking-widest transition-colors" onclick="navigateTo('lobby')">
+                                    Enter Arena <span class="material-symbols-outlined">arrow_forward</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Small Feature 1 -->
+                        <div class="glass-card relative overflow-hidden group p-md flex flex-col justify-end cursor-pointer" onclick="navigateTo('vault')">
+                            <div class="absolute inset-0 bg-cover bg-center opacity-40 transition-transform duration-700 group-hover:scale-105 z-0" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAEqK9xGYcgJHLsOX8uSDdsaUC4A_Ua4_Zmsp6c5_ACVedbM4dsseu0GtKjh4vCi0v_zyFVOY6mPbJOGyjHvQS-Y6Riq95uVICWyB9f830d-a23lwCM48JzjeAPWfCu1JM5DvMcBTV1LBfRbFIFZQHuPS4me4kLjtp340hh9O8hYIYYOtU-qY5jIDljeDP5qzccBOqyBUfR2YdRd1rlSeYsGtw0DN0FT-IfiEaDU2p2T9Dkrp00hGc2wA')"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent z-10"></div>
+                            <div class="relative z-20">
+                                <h3 class="font-headline-md text-headline-md text-primary-fixed text-xl mb-xs">VIP Vault</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant text-sm">Exclusive rewards for dedicated members.</p>
+                            </div>
+                        </div>
+                        <!-- Small Feature 2 -->
+                        <div class="glass-card relative overflow-hidden group p-md flex flex-col justify-end cursor-pointer" onclick="openSpinModal()">
+                            <div class="absolute inset-0 bg-cover bg-center opacity-40 transition-transform duration-700 group-hover:scale-105 z-0" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAHr0-a865k5Ltd28stcrdPU12Ijt0PjkLkL1dj2KSkQYU6IskRltlNczNIIDrPw_d7MCVMryzFxDTks0QShrpx_bVqzUE3dD57EJS5fKGmzkjgAyBLh_BIQlMtH8vzr7QGrHsRKGlNbDoxXPvlGD8C51ui3tsly-5RU9vhHyZiNv_E7CE_Bz5tGNZgFuuxbXTw093sHKTE15mgLZly2BP5HWOneSOTD6tHLkk6QO3EMdwjQeksNqOztw')"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent z-10"></div>
+                            <div class="relative z-20">
+                                <h3 class="font-headline-md text-headline-md text-primary-fixed text-xl mb-xs">Daily Drops</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant text-sm">Claim your simulated fortune every 24h.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: GAMES LOBBY VIEW (Contains all 11 Games) -->
+        <section id="view-lobby" class="view-section hidden">
+            <div class="w-full px-4 md:px-xl py-lg max-w-container-max mx-auto flex flex-col gap-xl">
+                <div class="flex flex-col items-center text-center gap-md">
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary-fixed drop-shadow-[0_0_15px_rgba(255,215,0,0.2)]">
+                        DEDETOTO LOBBY
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        Experience simulated high-stakes entertainment. Select a lounge to begin your session.
+                    </p>
+                </div>
+
+                <!-- Games Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-md lg:gap-lg">
+                    <!-- Game 1: Golden Reel Spin -->
+                    <div class="glass-panel-interactive flex flex-col overflow-hidden group">
+                        <div class="h-48 md:h-64 w-full relative overflow-hidden">
+                            <div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAYTt0vndOITJYMcErOfT2YUGvc84BMNnVI90fMgPdV_VykozypG3Q8R_ei8p4MbNVVMN8wxmscZljTw1a4ZgdoYSKl6EBUfA87acCQ2i2n9XUMm7tFQTPUSI7CHxCHYyMjO3ZgjIxi_XPXzhSt3y3NRR2l5F5An8KzWgGEBnLRuMPcycI56yXkiXdig7M7PX-I8hWYPRMDqGZ2S0DplfbONax3LjeWNB_a3LYPlYrzqGhxzYFzysU07w')"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+                            <div class="absolute top-md right-md bg-error/20 border border-error text-error rounded-full px-sm py-xs flex items-center gap-xs backdrop-blur-md">
+                                <span class="material-symbols-outlined text-[16px]">local_fire_department</span>
+                                <span class="font-label-bold text-label-bold uppercase">Hot</span>
+                            </div>
+                        </div>
+                        <div class="p-md flex flex-col gap-md flex-grow">
+                            <h2 class="font-headline-md text-headline-md text-primary-fixed">Golden Reel Spin</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                                Classic simulated slots with enhanced multiplier mechanics and luminous visuals.
+                            </p>
+                            <button class="btn-primary w-full text-on-primary-fixed font-button-text text-button-text uppercase tracking-widest py-sm mt-auto" onclick="launchGame('golden-reel')">
+                                Enter
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Game 2: Midnight Roulette -->
+                    <div class="glass-panel-interactive flex flex-col overflow-hidden group">
+                        <div class="h-48 md:h-64 w-full relative overflow-hidden">
+                            <div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDh-0R1MiWK9tfPu6YlmEc8Ho5zWWiy2CCmr0N5vPXYjUoo8A91lZBw_SV5wvyVNkT2Oi5XBBRnd2ylgshUT6tbmitATN1l8jxwKJgTiDByRyEyyezjdCuhv45RhqCcWpff0KqU9jYWJbJ74NH2qXgyq0GRJhDL_ueohBdhuSkaN5MQwGtFpQHdYp7hjOIJqeq9oAZlFUANHrFOsIXTXs3gv1JqvvjwpIhEJJIOJp2FDuI2Otso_DNOLw')"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-md flex flex-col gap-md flex-grow">
+                            <h2 class="font-headline-md text-headline-md text-primary-fixed">Midnight Roulette (Simulated)</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                                High-stakes atmosphere with advanced predictive tracking interface.
+                            </p>
+                            <button class="btn-primary w-full text-on-primary-fixed font-button-text text-button-text uppercase tracking-widest py-sm mt-auto" onclick="launchGame('roulette')">
+                                Enter
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Game 3: Diamond Vault -->
+                    <div class="glass-panel-interactive flex flex-col overflow-hidden group">
+                        <div class="h-48 md:h-64 w-full relative overflow-hidden">
+                            <div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAHWl6jjctyeolJ_G0QhS-yefh7tryX22LJRQ2TQGVZhSYwbSN2NQSd1gYThyro-Xzefr004-Bx7k80mnT22lTJN39JgQ8ouvvTimR24IFirlg3ylB5gFu8gFtG6z9YD-WUM8gXBD5hPShYP7fOesuGWhc08togEhVyktLawH69Az7b7lwW376Kwx9w8Xrc9FKSDVkfFXOWEmSQk1OJmqT1nmYjLaWXYo1zX_O9Y4vJDmsxUSC_fy9-Ng')"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-md flex flex-col gap-md flex-grow">
+                            <h2 class="font-headline-md text-headline-md text-primary-fixed">Diamond Vault</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                                Unlock progressive tiers in this simulated combination puzzle experience.
+                            </p>
+                            <button class="btn-primary w-full text-on-primary-fixed font-button-text text-button-text uppercase tracking-widest py-sm mt-auto" onclick="launchGame('diamond-vault')">
+                                Enter
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Game 4: Royal Cards -->
+                    <div class="glass-panel-interactive flex flex-col overflow-hidden group">
+                        <div class="h-48 md:h-64 w-full relative overflow-hidden">
+                            <div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAgg-G6snFRbIDm1NDP2QSeRVptXTxOBUyXFhcv5UIq4EHZUF19um6W0H0vOhOqaxC0zzeNCBLa9rbYazQQkIy-rZWRLnmhgp4W4OhLonKGU30rNIahixhOPepr2L64sWFt9avyZXR51FNqNZa13-XV7c9Yqod2nbV0u3XAqei9lBPBWYoYo9yWtZsP5NBQicQAvuC8DRk_BEr4xdPV-K1GyrKlav9Zz3rGCPaQyzY2Zc79GUA9R8FuFA')"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-md flex flex-col gap-md flex-grow">
+                            <h2 class="font-headline-md text-headline-md text-primary-fixed">Royal Cards</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                                Simulated strategic card encounters in an exclusive private room setting.
+                            </p>
+                            <button class="btn-primary w-full text-on-primary-fixed font-button-text text-button-text uppercase tracking-widest py-sm mt-auto" onclick="launchGame('royal-cards')">
+                                Enter
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Game 5: Solar Flare Spin -->
+                    <div class="glass-panel-interactive flex flex-col overflow-hidden group">
+                        <div class="h-48 md:h-64 w-full relative overflow-hidden">
+                            <div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDWcrhEXp2G-sOLkOpXCzkNq1X6Ga3ckPElh2U3l9GonjCnnoo_F-Q9TDtottGkaQ27JMe0zs1oD8oYCXw6_ux3zaoXczSB_R8CO6B7eidhAaP5JPaK8dR1MhcdOrv6vVUqkgQwW4wFNvXXBH8mHQ7064PbeyJmOW1bhsanftWSu-ppWozumFdmON8iD2c5kDQRltfd0cDlKNJPiZwXI0I3NkQcnHiEegX3yEH7MrB-JMLJZNztEFnFeA')"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-md flex flex-col gap-md flex-grow">
+                            <h2 class="font-headline-md text-headline-md text-primary-fixed">Solar Flare Spin</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                                Experience celestial heat with golden multipliers in this high-intensity sun-themed slot.
+                            </p>
+                            <button class="btn-primary w-full text-on-primary-fixed font-button-text text-button-text uppercase tracking-widest py-sm mt-auto" onclick="launchGame('solar-flare')">
+                                Enter
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Game 6: Stardust Poker -->
+                    <div class="glass-panel-interactive flex flex-col overflow-hidden group">
+                        <div class="h-48 md:h-64 w-full relative overflow-hidden">
+                            <div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDQQBaOldG66lDV2YQFdTpZIVq9fLrp_tcxb9wF_rIwHtPd-r-brPA7o02Cqw7yblB7nIsriTy2TllXrOmDXPEDOSlrRRCtVGIbNiwKVtEzinYiMjWp6bt8OLtCB8pU46rb6uDgZqbVqj9CFZXkLW3pKW7Y23ySt2Iviye2gABS1UXbxoiVna-2AbLT2XAyvXM1muB1lg2X6GGoeY4BPM86w8s9uIMt1rHL3UjoJoP6iK2FUryFUI1icA')"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-md flex flex-col gap-md flex-grow">
+                            <h2 class="font-headline-md text-headline-md text-primary-fixed">Stardust Poker</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                                Raise the stakes across the galaxy with interstellar hands and cosmic rewards.
+                            </p>
+                            <button class="btn-primary w-full text-on-primary-fixed font-button-text text-button-text uppercase tracking-widest py-sm mt-auto" onclick="launchGame('stardust-poker')">
+                                Enter
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Game 7: Titanium Blackjack -->
+                    <div class="glass-panel-interactive flex flex-col overflow-hidden group">
+                        <div class="h-48 md:h-64 w-full relative overflow-hidden">
+                            <div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAtLYebUlNhRFxa8PJ5lFJ5lEiCs3mlPskd3HAgllKEh9tvs7-bM1xHgaNDlgnXcmsBaxwzU-q_NnMNc_Fu1OmtzvE7qlR-6UsR9pveoQIjvVN8YEyyvlDxOepZgmWv14Ia8m69M6c1X_BeCo2rvJUqWpYVxC4Fn9bqAb4zpfiLLQVH4GWLlsslxBEyNDTlkRrdcQ21TepFeMRIEkBmsNUb5Ws7MdFKLihFNCP7HiMBIBSDXKlHH3GzGQ')"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-md flex flex-col gap-md flex-grow">
+                            <h2 class="font-headline-md text-headline-md text-primary-fixed">Titanium Blackjack</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                                Step into an ultra-modern, sleek metallic dealer room for the ultimate strategic challenge.
+                            </p>
+                            <button class="btn-primary w-full text-on-primary-fixed font-button-text text-button-text uppercase tracking-widest py-sm mt-auto" onclick="launchGame('blackjack')">
+                                Enter
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Game 8: Neon Dragon Baccarat -->
+                    <div class="glass-panel-interactive flex flex-col overflow-hidden group">
+                        <div class="h-48 md:h-64 w-full relative overflow-hidden">
+                            <div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDuEj-7O-m93f5iDy5Dy1ZvUf6038twsDKrJERnQsSzHnS-a4DCJiqcmY4F6JJ7pjHINSfbcLSFCjqMOoJDkUWt82UbMb6q3GdOad-f8q3zWyIvTD_MhjTThr0-of-MIAS6no9srQqB-0dEUc6lmSeR05u87ivLGajP2nASVK-XXzWNKoAF6evsBu-cec3ziPP11nz6yJgDym6QqpQSSV85IvLv0F5vwe8K1DDbw3y9OqmqzUMAQYrrOA')"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-md flex flex-col gap-md flex-grow">
+                            <h2 class="font-headline-md text-headline-md text-primary-fixed">Neon Dragon Baccarat</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                                Futuristic cyber-luxury meets glowing energy in this high-speed baccarat experience.
+                            </p>
+                            <button class="btn-primary w-full text-on-primary-fixed font-button-text text-button-text uppercase tracking-widest py-sm mt-auto" onclick="launchGame('baccarat')">
+                                Enter
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Game 9: Ocean's Pearl Slots -->
+                    <div class="glass-panel-interactive flex flex-col overflow-hidden group">
+                        <div class="h-48 md:h-64 w-full relative overflow-hidden">
+                            <div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCV9CmlEP_K3rMDFkPEyTNP1e3ezAEDR_ST2Lwh9NmMZ-ujtjBI-FBRRiCFVYn1MqeXO5EASfoqbmOK3J3oW9_M_a4adIUn-FT0vVEHTXOJZlvAh83yDTQ9INY3qwlQSoU6rvY3acOgis5C2PVXusBEYWYu3Ai5OPpsrs8qK_QeFQsElk3UIt0Cu2gFUGSPUku9TNJnptE_T5JzDUUvdtHIrYtoynI0Ld9teYrIr2KqVZ10BN6yShIl3Q')"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-md flex flex-col gap-md flex-grow">
+                            <h2 class="font-headline-md text-headline-md text-primary-fixed">Ocean's Pearl Slots</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                                Dive for deep sea treasures and iridescent rewards in this enchanted underwater slot.
+                            </p>
+                            <button class="btn-primary w-full text-on-primary-fixed font-button-text text-button-text uppercase tracking-widest py-sm mt-auto" onclick="launchGame('ocean-pearl')">
+                                Enter
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Game 10: Emerald Empress Roulette -->
+                    <div class="glass-panel-interactive flex flex-col overflow-hidden group">
+                        <div class="h-48 md:h-64 w-full relative overflow-hidden">
+                            <div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0adTzt3dilZ_eUPadlgR6AjrLFb5_Mli5Si54uKJieYsTTQl_iJQ3i1BryMgeZjk8unc6sI0J9fJy65522bnQq3BWn4eIUIYKZZFSuR8kndWSXcG6fAMmeaFZhX-8SRNaY7IWzeOj6Yejr0lppZZFkN-iySxTJYrqtLhuH7zIg3REf9aIuzPCmr30gNKrMq8I8_WqIdbLf6dHRIKM6xA3VL0dsdElfNK7Jb-6wxi2fleWSuKie5k4lQ')"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-md flex flex-col gap-md flex-grow">
+                            <h2 class="font-headline-md text-headline-md text-primary-fixed">Emerald Empress Roulette</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                                Spin the enchanted crystal wheel in a setting of pure forest luxury and magic.
+                            </p>
+                            <button class="btn-primary w-full text-on-primary-fixed font-button-text text-button-text uppercase tracking-widest py-sm mt-auto" onclick="launchGame('emerald-roulette')">
+                                Enter
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Game 11: Dede Gacor -->
+                    <div class="glass-panel-interactive flex flex-col overflow-hidden group">
+                        <div class="h-48 md:h-64 w-full relative overflow-hidden">
+                            <div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDUCycmso36d1zOC79KG0_BysJ9CAUj6lvDUg3Tyg3flCdITdETCptaz59WQsAB_Y-qLRbUse89vvMOsJLN5hjiEaknMRSxDSeQATL4rxsuYxUkqlXNKktuwE8qLmlHVVuCKRaCZPm2u1d8zzzHbp00G1nFjQ6TtSLoJjYrd7qO37EOZWszmRdgxmJSR5i5pyUZtWWtS6LyKqPjZffHTVwyAjAE6qvcU9hjFHY6S5w5vj5vrF5_pQIK4g')"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+                        </div>
+                        <div class="p-md flex flex-col gap-md flex-grow">
+                            <h2 class="font-headline-md text-headline-md text-primary-fixed">Dede Gacor</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                                Experience the ultimate royal fortune with high-multiplier crown rewards and golden treasure spins.
+                            </p>
+                            <button class="btn-primary w-full text-on-primary-fixed font-button-text text-button-text uppercase tracking-widest py-sm mt-auto" onclick="launchGame('dede-gacor')">
+                                Enter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: VIP DASHBOARD VIEW -->
+        <section id="view-vip" class="view-section hidden">
+            <div class="w-full max-w-container-max mx-auto px-md md:px-xl py-xl flex flex-col gap-lg">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-md mb-md">
+                    <div>
+                        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background gold-glow uppercase">VIP Dossier</h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant mt-xs">Welcome back. Your private suite awaits.</p>
+                    </div>
+                    <button class="luxe-button px-lg py-sm font-button-text text-button-text uppercase tracking-widest flex items-center gap-sm" onclick="navigateTo('lobby')">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">casino</span>
+                        Enter Spin Room
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-min">
+                    <!-- Balance Card -->
+                    <div class="glass-card md:col-span-8 p-lg flex flex-col justify-between relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary-container/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div class="relative z-10 flex flex-col h-full justify-between">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h2 class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Entertainment Points</h2>
+                                    <div id="vip-balance-display" class="font-display-lg text-[48px] md:text-[64px] font-bold text-primary-fixed mt-sm leading-none drop-shadow-[0_0_20px_rgba(255,215,0,0.5)]">
+                                        4,285,900
+                                    </div>
+                                </div>
+                                <div class="px-sm py-xs rounded-full bg-primary-container/20 border border-primary-fixed/50 flex items-center gap-xs backdrop-blur-md">
+                                    <span class="w-2 h-2 rounded-full bg-tertiary-fixed shadow-[0_0_8px_theme('colors.tertiary-fixed')] animate-pulse"></span>
+                                    <span class="font-label-bold text-label-bold text-tertiary-fixed text-xs">LIVE</span>
+                                </div>
+                            </div>
+                            <div class="mt-xl pt-md border-t border-white/10 flex gap-md items-center">
+                                <button class="text-on-background hover:text-primary-fixed transition-colors font-button-text text-button-text flex items-center gap-xs" onclick="openSpinModal()">
+                                    <span class="material-symbols-outlined">add_circle</span> Free Daily Spin
+                                </button>
+                                <span class="w-px h-4 bg-white/20"></span>
+                                <button class="text-on-background hover:text-primary-fixed transition-colors font-button-text text-button-text flex items-center gap-xs" onclick="navigateTo('vault')">
+                                    <span class="material-symbols-outlined">sync_alt</span> Redeem Vault Rewards
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VIP Tier Card -->
+                    <div class="glass-card md:col-span-4 p-lg flex flex-col items-center justify-center text-center relative overflow-hidden">
+                        <div class="relative z-10 w-full">
+                            <span class="material-symbols-outlined text-[64px] text-primary-fixed mb-sm drop-shadow-[0_0_25px_rgba(255,215,0,0.8)]" style="font-variation-settings: 'FILL' 1;">diamond</span>
+                            <h2 id="vip-tier-name" class="font-headline-md text-headline-md text-on-background uppercase tracking-wider mb-xs">Platinum Elite</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Top 1% of the Lounge.</p>
+                            <div class="w-full bg-surface-container-highest rounded-full h-2 mt-lg mb-sm overflow-hidden border border-white/5">
+                                <div id="vip-tier-progress" class="bg-gradient-to-r from-secondary-fixed to-primary-container h-full rounded-full w-3/4 shadow-[0_0_10px_rgba(255,215,0,0.5)]"></div>
+                            </div>
+                            <div class="flex justify-between w-full font-label-bold text-[12px] text-on-surface-variant">
+                                <span>Current Tier</span>
+                                <span class="text-primary-fixed">Diamond Status</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activity Log -->
+                    <div class="glass-card md:col-span-12 p-md md:p-lg">
+                        <div class="flex justify-between items-center mb-md pb-sm border-b border-white/10">
+                            <h3 class="font-headline-md text-headline-md text-on-background uppercase">Recent Vault Activity</h3>
+                            <button class="font-label-bold text-label-bold text-primary-fixed hover:text-primary-fixed-dim transition-colors uppercase tracking-widest flex items-center gap-xs" onclick="navigateTo('vault')">
+                                View Vault Store <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            </button>
+                        </div>
+                        <div id="activity-log-container" class="flex flex-col gap-sm">
+                            <!-- Populated dynamically by app.js -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: VAULT / REWARD STORE VIEW -->
+        <section id="view-vault" class="view-section hidden">
+            <div class="w-full max-w-container-max mx-auto px-4 md:px-xl py-lg">
+                <header class="mb-lg flex flex-col md:flex-row justify-between items-start md:items-end gap-md">
+                    <div>
+                        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-sm">
+                            The <span class="text-primary-fixed drop-shadow-[0_0_15px_rgba(255,215,0,0.3)]">Vault</span>
+                        </h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                            Exchange your Entertainment Points for exclusive digital assets and elite status markers. The collection is curated for our most distinguished members.
+                        </p>
+                    </div>
+                    <div class="glass-panel px-md py-sm rounded-full flex items-center gap-sm">
+                        <span class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Balance</span>
+                        <div class="flex items-center gap-xs">
+                            <span class="material-symbols-outlined text-primary-fixed text-[20px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+                            <span id="vault-balance-display" class="font-headline-md text-headline-md text-primary-fixed">4,285,900</span>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
+                    <!-- Reward Item 1 -->
+                    <article class="glass-panel rounded-[40px] p-md flex flex-col gap-md relative overflow-hidden group">
+                        <div class="w-full h-48 rounded-[24px] overflow-hidden mb-sm relative">
+                            <div class="bg-cover bg-center w-full h-full opacity-80 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDRATvWdABlSmWdmcMevCq6AYvsN0YKmLQajZgHzNUm1HluudI_0cyGI8GTXqRWHImRwnc2PhJfO9RYR9-kBhjntVi5cYUjruZVfowK_GBSKyX-kRfSQImJdoDeKg8CsbZ_T-pRpcO7fXTb0pGH7uyR4KV7YO_CPU8JOKboGiJvgJcpqkaX6KhUB4UUS_XF9cl-gXehz3DJiCJJgP3y1ZVk81u5FZcSifCeSW_vkCTJGX5e5VhEQaVs-g')"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#161308] to-transparent"></div>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-primary-fixed/10 border border-primary-fixed/30 mb-sm">
+                                <span class="material-symbols-outlined text-primary-fixed text-[14px]">palette</span>
+                                <span class="font-label-bold text-label-bold text-primary-fixed uppercase">Cosmetic</span>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Custom Profile Glow</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Radiate authority. Surround your avatar with a dynamic, bespoke energy signature.</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto pt-md border-t border-white/5">
+                            <div class="flex items-center gap-xs text-primary-fixed drop-shadow-[0_0_8px_rgba(255,215,0,0.4)]">
+                                <span class="material-symbols-outlined text-[18px]">stars</span>
+                                <span class="font-button-text text-button-text">25,000</span>
+                            </div>
+                            <button class="btn-primary px-md py-sm rounded-full font-button-text text-button-text uppercase tracking-widest text-sm" onclick="redeemReward('Custom Profile Glow', 25000)">
+                                Redeem
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Reward Item 2 -->
+                    <article class="glass-panel rounded-[40px] p-md flex flex-col gap-md relative overflow-hidden group">
+                        <div class="w-full h-48 rounded-[24px] overflow-hidden mb-sm relative">
+                            <div class="bg-cover bg-center w-full h-full opacity-80 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDG8l77cP81z-lFBDztfpIHM0iZw3gIXrSL0kv81vpJoIAfZHOoosyAFiSX07xKC09qegtyvg-bR6KbSqsZ0NsRONiJv9YjNRRuPeMqzAyZEEfUUT2c_qqjptE2MA-RS1l_Mw_JtAE5ih2RFJIunAELsBvr1KkuVpl_V-BLUbN6OvpN10AMJhC0Sm2sqwkhyFdQM_JIxEF69k_D07a3cHrRUKF-38X5kuLXo6zn1AAy-yOwqKm6plUpwA')"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#161308] to-transparent"></div>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-secondary-fixed/10 border border-secondary-fixed/30 mb-sm">
+                                <span class="material-symbols-outlined text-secondary-fixed text-[14px]">vpn_key</span>
+                                <span class="font-label-bold text-label-bold text-secondary-fixed uppercase">Access</span>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Exclusive Lobby Access</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Bypass the standard entry. Gain access to the high-roller staging area.</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto pt-md border-t border-white/5">
+                            <div class="flex items-center gap-xs text-primary-fixed drop-shadow-[0_0_8px_rgba(255,215,0,0.4)]">
+                                <span class="material-symbols-outlined text-[18px]">stars</span>
+                                <span class="font-button-text text-button-text">50,000</span>
+                            </div>
+                            <button class="btn-primary px-md py-sm rounded-full font-button-text text-button-text uppercase tracking-widest text-sm" onclick="redeemReward('Exclusive Lobby Access', 50000)">
+                                Redeem
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Reward Item 3 -->
+                    <article class="glass-panel rounded-[40px] p-md flex flex-col gap-md relative overflow-hidden group">
+                        <div class="w-full h-48 rounded-[24px] overflow-hidden mb-sm relative">
+                            <div class="bg-cover bg-center w-full h-full opacity-80 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJ9t3ctGCMHLFm0OXoREVWvAqh0HyPljf_dwc5czpCCwLMICAAsOwLfKINzfAsyTYYIqL0CEBhOAs5kMV99ibBzxTYI9beCkj6oDcng2G7MXPfgCzyK9iSCmFNuSI21eUjJXyMli3p2eZxEtPIfoOIaODH6esFQAgeygJz1BlqrCHIgBpFMfaHk5C87e7j64GdCQRMlOhVzv3tmQ_mYfIHZCQsXPJL-n_1s3q5sWogHQs8cs2Ga3eltQ')"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#161308] via-transparent to-transparent"></div>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-tertiary-fixed/10 border border-tertiary-fixed/30 mb-sm">
+                                <span class="material-symbols-outlined text-tertiary-fixed text-[14px]">bolt</span>
+                                <span class="font-label-bold text-label-bold text-tertiary-fixed uppercase">Boost</span>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Bonus Multiplier Pack</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Accelerate your ascent. 2x Entertainment Points generation for 48 hours.</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto pt-md border-t border-white/5">
+                            <div class="flex items-center gap-xs text-primary-fixed drop-shadow-[0_0_8px_rgba(255,215,0,0.4)]">
+                                <span class="material-symbols-outlined text-[18px]">stars</span>
+                                <span class="font-button-text text-button-text">12,000</span>
+                            </div>
+                            <button class="btn-primary px-md py-sm rounded-full font-button-text text-button-text uppercase tracking-widest text-sm" onclick="redeemReward('Bonus Multiplier Pack', 12000)">
+                                Redeem
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Reward Item 4 -->
+                    <article class="glass-panel rounded-[40px] p-md flex flex-col gap-md relative overflow-hidden group">
+                        <div class="w-full h-48 rounded-[24px] overflow-hidden mb-sm relative">
+                            <div class="bg-cover bg-center w-full h-full opacity-80 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZiMAJRmpEgmcoyrwR9I0y896ldPpipqb4h4zHNKrq1z9dDBLt9Zgvg7EleD2Hy6tmNpyd6b9FzkQO86ijF9rbvHwuoBEfjLqwYUP6S7BaUAomhTURABd3PsWf6a2J9LIffp06aqmrx7xyftkfZoJjvXT1PweiX_Zj8bISFwirzubn_jYflgYTmfgUY6ib5EoVIn8UnpvEWU45IWPR7mNB7gM5FEmGw3PRHOM2IlC-AayePBkg1CgsLw')"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#161308] to-transparent"></div>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="inline-flex items-center gap-xs px-sm py-xs rounded-full bg-outline/20 border border-outline/40 mb-sm">
+                                <span class="material-symbols-outlined text-outline text-[14px]">military_tech</span>
+                                <span class="font-label-bold text-label-bold text-outline uppercase">Status</span>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Platinum Badge</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Permanent profile insignia showcasing your dedication to the syndicate.</p>
+                        </div>
+                        <div class="flex items-center justify-between mt-auto pt-md border-t border-white/5">
+                            <div class="flex items-center gap-xs text-primary-fixed drop-shadow-[0_0_8px_rgba(255,215,0,0.4)]">
+                                <span class="material-symbols-outlined text-[18px]">stars</span>
+                                <span class="font-button-text text-button-text">100,000</span>
+                            </div>
+                            <button class="btn-primary px-md py-sm rounded-full font-button-text text-button-text uppercase tracking-widest text-sm" onclick="redeemReward('Platinum Badge', 100000)">
+                                Redeem
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: PROFILE / ACCOUNT DOSSIER VIEW -->
+        <section id="view-profile" class="view-section hidden">
+            <div class="max-w-container-max mx-auto px-4 md:px-xl py-lg flex flex-col md:flex-row gap-lg">
+                <!-- Sidebar Profile Summary -->
+                <aside class="w-full md:w-1/3 flex flex-col gap-md">
+                    <div class="glass-panel rounded-[40px] p-lg flex flex-col items-center text-center relative overflow-hidden">
+                        <div class="relative w-32 h-32 mb-md">
+                            <img id="profile-avatar-img" class="w-full h-full object-cover rounded-full avatar-glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-IYVRedtpt7IBMCHcpZKSsffVtKS97Lu01aluJ3cRDwgCRpIpQ2crhrf_XYkh_iRVQBHtusg5F8moX0BHRVDrdDiBH3VSXPI0I3tl0ndN95XyKFM3A2aQj3MwxbI7dJhDAEizofb0gh-gXNcmCwpYqcfEHRRO7D3y5iaCWvCMqp2ORNA88cUy78Qbjtl_4WALbo7L47i7ee-za2jG2PEmZ-5TEUTrdCrSa6bpXeiTuMTxT5at7NFCnA"/>
+                            <button class="absolute bottom-0 right-0 bg-surface-container border border-outline-variant p-2 rounded-full text-primary-fixed hover:bg-primary-fixed/10 transition-colors" onclick="document.getElementById('avatar-file-input').click()">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">edit</span>
+                            </button>
+                            <input type="file" id="avatar-file-input" class="hidden" accept="image/*" onchange="handleAvatarChange(event)">
+                        </div>
+                        <h1 id="profile-display-name" class="font-headline-md text-headline-md text-primary-fixed mb-xs">ALEXANDER V.</h1>
+                        <p class="font-body-md text-on-surface-variant mb-md">Elite Member since '23</p>
+                        <div class="flex gap-sm mb-lg">
+                            <span class="px-3 py-1 rounded-full bg-[#ffc56a]/20 border border-[#ffc56a] font-label-bold text-label-bold text-[#ffc56a] uppercase">VIP Tier 4</span>
+                            <span class="px-3 py-1 rounded-full bg-[#00f1ff]/20 border border-[#00f1ff] font-label-bold text-label-bold text-[#00f1ff] uppercase">Verified</span>
+                        </div>
+                        <div class="w-full border-t border-white/10 pt-md flex justify-between px-md">
+                            <div class="text-center">
+                                <div class="font-headline-md text-headline-md text-on-surface">42</div>
+                                <div class="font-label-bold text-label-bold text-on-surface-variant uppercase text-[10px]">Events</div>
+                            </div>
+                            <div class="text-center">
+                                <div id="profile-ep-display" class="font-headline-md text-headline-md text-on-surface">4,285k</div>
+                                <div class="font-label-bold text-label-bold text-on-surface-variant uppercase text-[10px]">Points</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel rounded-[40px] p-md flex flex-col gap-2">
+                        <a class="flex items-center gap-md p-md rounded-[20px] bg-primary-fixed/10 text-primary-fixed border border-primary-fixed/30 transition-all cursor-pointer">
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+                            <span class="font-button-text text-button-text">Account Dossier</span>
+                        </a>
+                        <a class="flex items-center gap-md p-md rounded-[20px] text-on-surface-variant hover:bg-white/5 hover:text-on-surface transition-all cursor-pointer" onclick="navigateTo('vault')">
+                            <span class="material-symbols-outlined">tune</span>
+                            <span class="font-button-text text-button-text">Preferences &amp; Vault</span>
+                        </a>
+                        <a class="flex items-center gap-md p-md rounded-[20px] text-on-surface-variant hover:bg-white/5 hover:text-on-surface transition-all cursor-pointer" onclick="navigateTo('legal')">
+                            <span class="material-symbols-outlined">security</span>
+                            <span class="font-button-text text-button-text">Security &amp; Legal</span>
+                        </a>
+                    </div>
+                </aside>
+
+                <!-- Dossier Form -->
+                <div class="w-full md:w-2/3 flex flex-col gap-lg">
+                    <section class="glass-panel rounded-[40px] p-lg md:p-[40px]">
+                        <div class="flex items-center gap-md mb-lg border-b border-white/10 pb-md">
+                            <span class="material-symbols-outlined text-primary-fixed text-[32px]">folder_shared</span>
+                            <h2 class="font-headline-md text-headline-md text-primary-fixed uppercase tracking-widest">Account Dossier</h2>
+                        </div>
+                        <form id="profile-form" class="grid grid-cols-1 md:grid-cols-2 gap-md" onsubmit="saveProfileDossier(event)">
+                            <div class="flex flex-col gap-xs">
+                                <label class="font-label-bold text-label-bold text-on-surface-variant ml-2">Alias / Username</label>
+                                <input id="input-alias" class="luminous-input w-full p-md font-body-lg text-body-lg rounded-2xl" type="text" value="AlexV_Elite"/>
+                            </div>
+                            <div class="flex flex-col gap-xs">
+                                <label class="font-label-bold text-label-bold text-on-surface-variant ml-2">Full Name</label>
+                                <input id="input-fullname" class="luminous-input w-full p-md font-body-lg text-body-lg rounded-2xl" type="text" value="Alexander Vance"/>
+                            </div>
+                            <div class="flex flex-col gap-xs md:col-span-2">
+                                <label class="font-label-bold text-label-bold text-on-surface-variant ml-2">Secure Email</label>
+                                <div class="relative">
+                                    <input id="input-email" class="luminous-input w-full p-md font-body-lg text-body-lg pl-xl rounded-2xl" type="email" value="alexander.v@luminaluxe.priv"/>
+                                    <span class="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-on-surface-variant">mail</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-xs md:col-span-2">
+                                <label class="font-label-bold text-label-bold text-on-surface-variant ml-2">Bio / Status</label>
+                                <textarea id="input-bio" class="luminous-input w-full p-md font-body-lg text-body-lg resize-none rounded-2xl" rows="3">Seeking high-stakes environments and exclusive network opportunities.</textarea>
+                            </div>
+                            <div class="md:col-span-2 flex justify-between items-center mt-md">
+                                <span id="save-status-msg" class="font-body-md text-primary-fixed hidden">✓ Dossier saved successfully!</span>
+                                <button class="gold-btn px-xl py-sm font-button-text text-button-text uppercase ml-auto" type="submit">Save Dossier</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: LEGAL / TERMS / RESPONSIBLE PLAY VIEW -->
+        <section id="view-legal" class="view-section hidden">
+            <div class="max-w-container-max mx-auto px-4 md:px-xl py-lg">
+                <header class="text-center mb-lg">
+                    <h1 class="font-display-lg-mobile md:font-display-lg text-primary-fixed glow-text uppercase mb-sm">Legal Sovereignty</h1>
+                    <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                        The protocols and governing rules for engagement within the Dedetoto simulated entertainment environment.
+                    </p>
+                </header>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+                    <aside class="col-span-1 md:col-span-3 hidden md:block">
+                        <div class="sticky top-md">
+                            <nav class="flex flex-col space-y-md">
+                                <a class="font-label-bold text-label-bold text-primary-fixed border-l-2 border-primary-fixed pl-sm uppercase tracking-widest cursor-pointer" href="#tos">Terms of Service</a>
+                                <a class="font-label-bold text-label-bold text-on-surface-variant/70 border-l-2 border-transparent pl-sm uppercase tracking-widest cursor-pointer" href="#rp">Responsible Play</a>
+                                <a class="font-label-bold text-label-bold text-on-surface-variant/70 border-l-2 border-transparent pl-sm uppercase tracking-widest cursor-pointer" href="#privacy">Privacy Charter</a>
+                            </nav>
+                        </div>
+                    </aside>
+
+                    <div class="col-span-1 md:col-span-9 space-y-lg">
+                        <section class="glass-panel rounded-[40px] p-md md:p-lg relative overflow-hidden" id="tos">
+                            <h2 class="font-headline-md text-headline-md text-primary-fixed mb-md uppercase">1. Entertainment Architecture</h2>
+                            <div class="font-body-md text-body-md text-on-surface-variant space-y-md">
+                                <p>Welcome to Dedetoto. By accessing our platform, you acknowledge that you are entering a highly simulated, luxury entertainment environment.</p>
+                                <p class="font-body-lg text-on-background border-l-4 border-primary-container pl-sm py-xs my-md bg-surface-container/50">
+                                    This platform operates strictly as a simulated experience. No real money, legal tender, or real-world assets are wagered, won, or lost within this environment.
+                                </p>
+                                <ul class="space-y-sm pl-sm list-disc list-inside text-primary-fixed">
+                                    <li><span class="text-on-surface-variant">All digital assets, tokens, and achievements hold zero monetary value.</span></li>
+                                    <li><span class="text-on-surface-variant">Participation requires verification of legal age (18+) within your jurisdiction.</span></li>
+                                    <li><span class="text-on-surface-variant">The platform retains the right to modify, suspend, or terminate access to maintain environmental integrity.</span></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="glass-panel rounded-[40px] p-md md:p-lg relative overflow-hidden" id="rp">
+                            <h2 class="font-headline-md text-headline-md text-primary-fixed mb-md uppercase flex items-center gap-sm">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shield</span>
+                                Responsible Engagement Protocol
+                            </h2>
+                            <div class="font-body-md text-body-md text-on-surface-variant space-y-md">
+                                <p>While Dedetoto is entirely simulated, we champion mindful digital engagement. The VIP experience is designed for enjoyment, not compulsion.</p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-md mt-md">
+                                    <div class="bg-surface-container p-sm rounded-xl border border-outline-variant/30">
+                                        <h3 class="font-label-bold text-label-bold text-on-background mb-xs uppercase">Time Management</h3>
+                                        <p class="text-sm">We encourage patrons to utilize our built-in reality checks and session limiters to ensure entertainment remains balanced.</p>
+                                    </div>
+                                    <div class="bg-surface-container p-sm rounded-xl border border-outline-variant/30">
+                                        <h3 class="font-label-bold text-label-bold text-on-background mb-xs uppercase">Self-Exclusion</h3>
+                                        <p class="text-sm">Patrons may request a temporary or permanent suspension of their access privileges at any time via the Concierge desk.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SPIN & WIN MODAL -->
+    <div id="spin-modal" class="fixed inset-0 z-50 flex items-center justify-center p-md bg-black/80 backdrop-blur-md hidden">
+        <div class="glass-card w-full max-w-[450px] rounded-4xl p-md md:p-lg flex flex-col gap-lg relative">
+            <button class="absolute top-4 right-4 text-on-surface-variant hover:text-primary-fixed" onclick="closeSpinModal()">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="text-center flex flex-col gap-xs">
+                <h1 class="font-display-lg-mobile text-primary-container text-glow-gold">✦ DEDETOTO ✦</h1>
+                <p class="font-label-bold text-[12px] text-on-surface-variant tracking-[0.2em] uppercase">— SPIN &amp; WIN —</p>
+            </div>
+            <form id="spin-form" class="flex flex-col gap-md" onsubmit="event.preventDefault(); simulateSpin();">
+                <div class="flex flex-col gap-xs">
+                    <label class="font-label-bold text-[11px] text-outline tracking-widest uppercase flex items-center gap-xs">
+                        <span class="material-symbols-outlined text-[16px]">person</span> NAMA LENGKAP
+                    </label>
+                    <input id="spin-name" class="input-glass w-full rounded-2xl h-[56px] px-sm text-on-surface font-body-md placeholder-outline-variant" placeholder="Masukkan nama Anda" required type="text"/>
+                </div>
+                <div class="flex flex-col gap-xs">
+                    <label class="font-label-bold text-[11px] text-outline tracking-widest uppercase flex items-center gap-xs">
+                        <span class="material-symbols-outlined text-[16px]">mail</span> EMAIL
+                    </label>
+                    <input id="spin-email" class="input-glass w-full rounded-2xl h-[56px] px-sm text-on-surface font-body-md placeholder-outline-variant" placeholder="nama@email.com" required type="email"/>
+                </div>
+                <div class="flex flex-col gap-xs">
+                    <label class="font-label-bold text-[11px] text-outline tracking-widest uppercase flex items-center gap-xs">
+                        <span class="material-symbols-outlined text-[16px]">cake</span> TANGGAL LAHIR
+                    </label>
+                    <input id="spin-dob" class="input-glass w-full rounded-2xl h-[56px] px-sm text-on-surface font-body-md text-on-surface-variant" required type="date"/>
+                </div>
+                <button class="btn-gold w-full rounded-[20px] h-[64px] font-button-text text-[18px] uppercase tracking-widest mt-sm flex items-center justify-center gap-sm" type="submit">
+                    <span class="material-symbols-outlined text-black" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                    SPIN GRATIS
+                    <span class="material-symbols-outlined text-black" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                </button>
+            </form>
+            <div class="bg-surface-container/50 border border-outline-variant/30 rounded-3xl p-[18px] text-center transition-all duration-300" id="resultBox">
+                <p class="font-body-md text-primary" id="resultText">🎰 Klik SPIN untuk bermain!</p>
+            </div>
+            <div class="text-center mt-xs">
+                <p class="font-body-md text-[11px] text-outline-variant tracking-wider uppercase flex items-center justify-center gap-xs">
+                    <span class="material-symbols-outlined text-[14px]">flash_on</span>
+                    simulasi hiburan • tanpa uang asli
+                    <span class="material-symbols-outlined text-[14px]">flash_on</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- GAME ARENA PLAYABLE OVERLAY MODAL -->
+    <div id="game-modal" class="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-md bg-black/90 backdrop-blur-lg hidden overflow-y-auto">
+        <div class="glass-card w-full max-w-4xl rounded-3xl p-md md:p-lg flex flex-col gap-md relative my-auto border-2 border-primary-fixed/40 shadow-[0_0_50px_rgba(255,215,0,0.3)]">
+            <!-- Modal Header -->
+            <div class="flex justify-between items-center border-b border-white/10 pb-sm">
+                <div class="flex items-center gap-sm">
+                    <span class="material-symbols-outlined text-primary-fixed text-2xl" id="game-modal-icon">casino</span>
+                    <h2 id="game-modal-title" class="font-headline-md text-primary-fixed uppercase text-lg sm:text-2xl glow-text">Game Title</h2>
+                </div>
+                <div class="flex items-center gap-md">
+                    <div class="flex items-center gap-xs px-sm py-xs bg-surface-container border border-primary-fixed/40 rounded-full">
+                        <span class="material-symbols-outlined text-primary-fixed text-sm">stars</span>
+                        <span id="game-modal-balance" class="font-label-bold text-primary-fixed text-sm">4,285,900</span>
+                    </div>
+                    <button class="text-on-surface-variant hover:text-primary-fixed p-1 rounded-full bg-surface-container/80" onclick="closeGameModal()">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Game Arena Canvas Container -->
+            <div id="game-canvas-area" class="w-full min-h-[350px] sm:min-h-[420px] bg-surface-container-lowest/90 border border-white/10 rounded-2xl p-md flex flex-col items-center justify-center relative overflow-hidden">
+                <!-- Dynamically populated by games.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-surface-dim border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center w-full px-xl py-lg max-w-container-max mx-auto mt-auto gap-md z-10 relative">
+        <div class="font-label-bold text-label-bold text-primary-fixed-dim text-center md:text-left">
+            © 2024 LUMINA LUXE ENTERTAINMENT. PRIVATE ACCESS ONLY.
+        </div>
+        <div class="flex gap-md flex-wrap justify-center">
+            <a class="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors cursor-pointer" onclick="navigateTo('legal')">Terms of Service</a>
+            <a class="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors cursor-pointer" onclick="navigateTo('legal')">Privacy Policy</a>
+            <a class="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors cursor-pointer" onclick="navigateTo('legal')">Responsible Play</a>
+            <a class="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors cursor-pointer" onclick="alert('Concierge service is active 24/7 for VIP members.')">Contact Concierge</a>
+        </div>
+    </footer>
+
+    <!-- Application Scripts -->
+    <script src="app.js"></script>
+    <script src="games.js"></script>
+</body>
+</html>
